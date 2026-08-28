@@ -1,0 +1,22 @@
+@url=https://jsonplaceholder.typicode.com
+
+GET {{url}}/users
+
+###
+
+GET {{url}}/users/1
+###
+
+GET {{url}}/posts/1
+###
+
+GET {{url}}/posts/1/comments
+###
+
+GET {{url}}/users/1/posts
+
+###
+DELETE {{url}}/users/1
+###
+
+GET https://api.argentinadatos.com/v1/feriados/2026
