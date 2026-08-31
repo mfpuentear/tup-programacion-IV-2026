@@ -1,0 +1,14 @@
+@url=http://localhost:3000
+
+GET {{url}}/
+
+###
+GET {{url}}/saludo
+
+###
+POST {{url}}/saludo
+###
+GET {{url}}/arreglo
+
+###
+GET {{url}}/objeto
