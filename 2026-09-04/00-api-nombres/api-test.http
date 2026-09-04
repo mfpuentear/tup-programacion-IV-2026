@@ -1,0 +1,33 @@
+@url=http://localhost:3000
+
+GET {{url}}/
+
+###
+
+GET {{url}}/nombres
+
+###
+
+GET {{url}}/nombres/55
+
+###
+
+POST {{url}}/nombres
+Content-Type: application/json
+
+{
+    "nombre": "Pancho"
+}
+
+###
+
+PUT {{url}}/nombres/2
+Content-Type: application/json
+
+{
+    "nombre": "Pancho"
+}
+
+###
+
+DELETE {{url}}/nombres/2
