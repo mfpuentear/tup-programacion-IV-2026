@@ -1,0 +1,30 @@
+@url=http://localhost:3000
+
+### Listado de productos
+GET {{url}}/productos
+
+### Detalles de producto
+GET {{url}}/productos/3
+
+### Crear producto
+POST {{url}}/productos
+Content-Type: application/json
+
+{
+    "producto": "Manzana",
+    "precio": 1,
+    "cantidad": 10
+}
+
+### Modificar producto
+PUT {{url}}/productos/3
+Content-Type: application/json
+
+{
+  "producto": "Jaboooooon",
+  "cantidad": 30,
+  "precio": 9
+}
+
+### Quitar producto
+DELETE {{url}}/productos/3
