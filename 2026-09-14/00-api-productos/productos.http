@@ -3,6 +3,15 @@
 ### Listado de productos
 GET {{url}}/productos
 
+### Listado de productos filtrado por precio minimo
+GET {{url}}/productos?precioMin=10.1
+
+### Listado de productos filtrado por producto
+GET {{url}}/productos?productoNombre=et
+
+### Listado de productos filtrado por precio minimo y producto
+GET {{url}}/productos?productoNombre=et&precioMin=6
+
 ### Detalles de producto
 GET {{url}}/productos/3
 

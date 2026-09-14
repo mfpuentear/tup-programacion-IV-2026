@@ -23,7 +23,30 @@ app.get("/", (req, res) => {
 
 // GET para entregar listado de productos
 app.get("/productos", (req, res) => {
-  res.send(productos);
+  // Copio arreglo original
+  let productosFiltrados = [...productos];
+
+  let precioMin = req.query.precioMin;
+  if (precioMin) {
+    precioMin = Number(precioMin);
+    if (isNaN(precioMin) || precioMin < 0) {
+      return res.status(400).send("Precio mínimo inválido");
+    }
+    productosFiltrados = productosFiltrados.filter(
+      (p) => p.precio >= precioMin,
+    );
+  }
+
+  const productoNombre = req.query.productoNombre;
+  if (productoNombre) {
+    productosFiltrados = productosFiltrados.filter((p) =>
+      p.producto
+        .toLocaleLowerCase()
+        .includes(productoNombre.toLocaleLowerCase()),
+    );
+  }
+
+  res.send(productosFiltrados);
 });
 
 // GET para entregar detalle de producto
@@ -43,8 +66,7 @@ app.get("/productos/:id", (req, res) => {
 
 // POST para crear producto
 app.post("/productos", (req, res) => {
-  // Extraigo del :w
-  // body los atributos del nuevo producto
+  // Extraigo del body los atributos del nuevo producto
   const { producto, cantidad, precio } = req.body;
 
   // Validar los atributos de body
