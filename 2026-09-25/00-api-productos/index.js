@@ -51,13 +51,18 @@ app.get("/productos/:id", async (req, res) => {
 });
 
 // POST para crear producto
-app.post("/productos", (req, res) => {
+app.post("/productos", async (req, res) => {
   // Extraigo del body los atributos del nuevo producto
-  const { producto, cantidad } = req.body;
-
+  const { nombre, cantidad } = req.body;
   // Validar los atributos de body
+
+  const [result] = await db.execute(
+    "INSERT INTO productos(nombre,cantidad) VALUES (?,?)",
+    [nombre, cantidad],
+  );
+
   // Envio respuesta
-  //res.status(201).send(nuevoProducto);
+  res.status(201).send({ id: result.insertId, nombre, cantidad });
 });
 
 // PUT para modificar producto a partir de un id
@@ -69,7 +74,7 @@ app.put("/productos/:id", (req, res) => {
   // Verificar que este presente el producto
 
   // Validar el body
-  const { producto, cantidad } = req.body;
+  const { nombre, cantidad } = req.body;
   // Verificar que existan los campos obligatorios
 
   // Responder con producto modificado

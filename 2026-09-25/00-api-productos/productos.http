@@ -11,7 +11,7 @@ POST {{url}}/productos
 Content-Type: application/json
 
 {
-    "producto": "Manzana",
+    "nombre": "Manzana",
     "cantidad": 10
 }
 
@@ -20,7 +20,7 @@ PUT {{url}}/productos/3
 Content-Type: application/json
 
 {
-  "producto": "Jaboooooon",
+  "nombre": "Jaboooooon",
   "cantidad": 30,
 }
 
