@@ -1,0 +1,43 @@
+@url=http://localhost:3000
+
+### Listado de productos
+GET {{url}}/productos
+
+### Listado de productos con filtro de producto
+GET {{url}}/productos?nombre=a
+
+### Listado de productos con filtro de precio minimo
+GET {{url}}/productos?cantidadMin=5
+
+### Listado de productos con filtro de precio minimo y maximo
+GET {{url}}/productos?cantidadMin=5&cantidadMax=10
+
+### Listado de productos con filtro de producto y precio minimo
+GET {{url}}/productos?nombre=a&cantidadMin=5
+
+### Listado de productos con filtro de precio minimo y producto
+GET {{url}}/productos?cantidadMin=5&nombre=a
+
+### Detalles de producto
+GET {{url}}/productos/algo
+
+### Crear producto
+POST {{url}}/productos
+Content-Type: application/json
+
+{
+    "nombre": "",
+    "cantidad": -20
+}
+
+### Modificar producto
+PUT {{url}}/productos/3
+Content-Type: application/json
+
+{
+  "nombre": "Jaboooooon",
+  "cantidad": 30,
+}
+
+### Quitar producto
+DELETE {{url}}/productos/3
