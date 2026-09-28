@@ -1,0 +1,16 @@
+{
+  "name": "00-api-productos",
+  "version": "1.0.0",
+  "description": "API de productos",
+  "license": "ISC",
+  "author": "Matias De la Puente",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --env-file=.env --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.24.4"
+  }
+}
