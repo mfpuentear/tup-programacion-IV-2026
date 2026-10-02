@@ -1,0 +1,18 @@
+@url=http://localhost:3000
+
+### Consultar categorias
+GET {{url}}/categorias
+
+### Consultar categoria
+GET {{url}}/categorias/2
+
+### Crear categoria
+POST {{url}}/categorias
+Content-Type: application/json
+
+{
+    "nombre": "Bebidas"
+}
+
+### Consultar por productos con un id de categoria
+GET {{url}}/categorias/1/productos
