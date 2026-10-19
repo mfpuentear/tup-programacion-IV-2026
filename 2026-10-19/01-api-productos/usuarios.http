@@ -1,0 +1,19 @@
+@url=http://localhost:3000
+
+### Consultar usuarios
+GET {{url}}/usuarios
+
+### Consultar por un usuario
+GET {{url}}/usuarios/1
+
+### Crear usuario
+POST {{url}}/usuarios
+Content-Type: application/json
+
+{
+    "username": "pepe13",
+    "apellidos": "Algo",
+    "nombres":"Jose",
+    "password": "hola1234",
+    "esAdmin": false
+}

@@ -1,0 +1,21 @@
+{
+  "name": "01-api-productos",
+  "version": "1.0.0",
+  "description": "API de productos",
+  "license": "ISC",
+  "author": "Matias De la Puente",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --env-file=.env --watch index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.24.4",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1"
+  }
+}
