@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { conectarDB } from "./db.js";
 import productosRouter from "./productos.js";
 import categoriasRouter from "./categorias.js";
@@ -12,6 +13,9 @@ const port = 3000;
 
 // Para interpretar body como JSON
 app.use(express.json());
+
+// Habilito CORS
+app.use(cors());
 
 // Configurar passport
 authConfig();
