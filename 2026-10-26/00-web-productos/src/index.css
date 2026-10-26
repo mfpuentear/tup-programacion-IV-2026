@@ -1,0 +1,61 @@
+/* Aqui va el css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: lightgrey;
+}
+
+main {
+  width: 80%;
+  max-width: 960px;
+  margin: 20px auto;
+  border: 2px solid lightslategray;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+table {
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 5px;
+  border: 1px solid;
+  text-align: center;
+}

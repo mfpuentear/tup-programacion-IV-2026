@@ -21,17 +21,17 @@ router.get(
     const { nombre, cantidadMin, cantidadMax } = req.query;
 
     if (nombre) {
-      filtros.push("nombre LIKE ?");
+      filtros.push("p.nombre LIKE ?");
       parametros.push(`%${nombre}%`);
     }
 
     if (cantidadMin !== undefined) {
-      filtros.push("cantidad >= ?");
+      filtros.push("p.cantidad >= ?");
       parametros.push(Number(cantidadMin));
     }
 
     if (cantidadMax !== undefined) {
-      filtros.push("cantidad <= ?");
+      filtros.push("p.cantidad <= ?");
       parametros.push(Number(cantidadMax));
     }
 
