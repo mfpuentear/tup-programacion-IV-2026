@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get(
   "/",
-  passport.authenticate("jwt", { session: false }), // Aqui indicamos que verifique la presencia del token (jwt)
+  //passport.authenticate("jwt", { session: false }), // Aqui indicamos que verifique la presencia del token (jwt)
   async (req, res) => {
     // Verificar que el usuario sea administrador
     if (!req.user.esAdmin) {

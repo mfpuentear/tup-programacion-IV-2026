@@ -65,7 +65,7 @@ router.get("/:id", validarId, verificarValidaciones, async (req, res) => {
 
   const [productos] = await db.execute(sql, [id]);
 
-  if (rows.length === 0) {
+  if (productos.length === 0) {
     return res.status(404).send("Producto no encontrado");
   }
 
