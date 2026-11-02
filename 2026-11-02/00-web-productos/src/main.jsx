@@ -7,6 +7,8 @@ import { Home } from "./Home";
 import { Productos } from "./Productos";
 import { ProductoDetalles } from "./ProductoDetalles";
 import { ProductoCrear } from "./ProductoCrear";
+import { Usuarios } from "./Usuarios";
+import { UsuarioDetalles } from "./UsuariosDetalles";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -19,6 +21,11 @@ createRoot(document.getElementById("root")).render(
             <Route index element={<Productos />} />
             <Route path=":id" element={<ProductoDetalles />} />
             <Route path="crear" element={<ProductoCrear />} />
+          </Route>
+
+          <Route path="usuarios">
+            <Route index element={<Usuarios />} />
+            <Route path=":id" element={<UsuarioDetalles />} />
           </Route>
         </Route>
       </Routes>

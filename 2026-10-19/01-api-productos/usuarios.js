@@ -12,9 +12,11 @@ router.get(
   //passport.authenticate("jwt", { session: false }), // Aqui indicamos que verifique la presencia del token (jwt)
   async (req, res) => {
     // Verificar que el usuario sea administrador
+    /*
     if (!req.user.esAdmin) {
       return res.status(401).send("Usuario no autorizado");
     }
+      */
 
     const [usuarios] = await db.execute(
       "SELECT id, username, nombres, apellidos, es_admin FROM usuarios",

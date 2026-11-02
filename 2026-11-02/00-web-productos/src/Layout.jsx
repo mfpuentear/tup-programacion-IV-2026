@@ -13,6 +13,9 @@ export function Layout() {
           <li className={pathname.startsWith("/productos") ? "active" : ""}>
             <Link to="/productos">Productos</Link>
           </li>
+          <li className={pathname.startsWith("/usuarios") ? "active" : ""}>
+            <Link to="/usuarios">Usuarios</Link>
+          </li>
         </ul>
       </nav>
       <Outlet />
